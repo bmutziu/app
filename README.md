@@ -1,4 +1,4 @@
-# App from Windows 11
+# App from Ubuntu 20.04
 
 ## Template
 
