@@ -3,11 +3,13 @@ LABEL maintainer "Krateo <contact@krateoplatformops.io>"
 
 ARG VERSION
 
+RUN apk add g++ make py3-pip
+
 WORKDIR /app
 COPY . ./
 RUN yarn
 RUN npm version $VERSION
-RUN yarn build
+RUN PUBLIC_URL=https://app.bmutziu.me yarn build
 
 # server environment
 FROM bitnami/nginx
